@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "gensoukyou",
+  "version": "1",
+  "name": "Gensoukyou",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/gensoukyou/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.lingbaojun.gensoukyou.client.GensoukyouClient"
+    ],
+    "main": [
+      "com.lingbaojun.gensoukyou.Gensoukyou"
+    ]
+  },
+  "mixins": [
+    "gensoukyou.mixins.json",
+    {
+      "config": "gensoukyou.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "fabric": "*",
+    "minecraft": "1.21.1"
+  }
+}
